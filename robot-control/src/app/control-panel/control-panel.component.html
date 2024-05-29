@@ -1,0 +1,93 @@
+<div>
+    <h2 style="font-weight: bold">Controle dos Braços</h2>
+    <br />
+    <h2 style="font-weight: bold">Regras para movimentar os braços:</h2>
+    <p>
+        O estado inicial dos movimentos é Em Repouso. Só poderá movimentar o
+        Pulso caso o Cotovelo esteja Fortemente Contraído.
+    </p>
+    <div>
+        <h2 style="font-weight: bold">Braço Esquerdo</h2>
+        <label>Cotovelo:</label>
+        <select
+            [(ngModel)]="robo?.bracoEsquerdo.cotovelo"
+            (ngModelChange)="movimentoBracoEsquerdo()"
+        >
+            <option
+                *ngFor="let estado of cotoveloEstados | keyvalue"
+                [ngValue]="estado.value"
+            >
+                {{ estado.value }}
+            </option>
+        </select>
+        <label>Pulso:</label>
+        <select
+            [(ngModel)]="robo.bracoEsquerdo.pulso"
+            (ngModelChange)="movimentoBracoEsquerdo()"
+        >
+            <option
+                *ngFor="let estado of pulsoEstados | keyvalue"
+                [ngValue]="estado.value"
+            >
+                {{ estado.value }}
+            </option>
+        </select>
+    </div>
+    <br />
+    <div>
+        <h2 style="font-weight: bold">Braço Direito</h2>
+        <label>Cotovelo:</label>
+        <select
+            [(ngModel)]="robo.bracoDireito.cotovelo"
+            (ngModelChange)="movimentoBracoDireito()"
+        >
+            <option
+                *ngFor="let estado of cotoveloEstados | keyvalue"
+                [ngValue]="estado.value"
+            >
+                {{ estado.value }}
+            </option>
+        </select>
+        <label>Pulso:</label>
+        <select
+            [(ngModel)]="robo.bracoDireito.pulso"
+            (ngModelChange)="movimentoBracoDireito()"
+        >
+            <option
+                *ngFor="let estado of pulsoEstados | keyvalue"
+                [ngValue]="estado.value"
+            >
+                {{ estado.value }}
+            </option>
+        </select>
+    </div>
+    <br />
+    <h2 style="font-weight: bold">Controle da Cabeça</h2>
+
+    <div>
+        <label>Rotação:</label>
+        <select
+            [(ngModel)]="robo.cabeca.rotacao"
+            (ngModelChange)="movimentoCabeca()"
+        >
+            <option
+                *ngFor="let estado of rotacaoCabeca | keyvalue"
+                [ngValue]="estado.value"
+            >
+                {{ estado.value }}
+            </option>
+        </select>
+        <label>Inclinação:</label>
+        <select
+            [(ngModel)]="robo.cabeca.inclinacao"
+            (ngModelChange)="movimentoCabeca()"
+        >
+            <option
+                *ngFor="let estado of inclinacaoCabeca | keyvalue"
+                [ngValue]="estado.value"
+            >
+                {{ estado.value }}
+            </option>
+        </select>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="robot">
+    <div class="cabeca" [ngClass]="!erro ? estiloCabeca : ''">
+        <div class="olhos">
+            <div class="olho esquerdo"></div>
+            <div class="olho direito"></div>
+        </div>
+        <div class="boca"></div>
+    </div>
+
+    <div class="corpo">
+        <div class="braco esquerdo" [ngClass]="!erro ? estiloBracoEsquerdo : ''">
+            <div class="pulso" [ngClass]="!erro ? estiloPulsoEsquerdo : ''"></div>
+        </div>
+        <div class="braco direito" [ngClass]="!erro ? estiloBracoDireito : ''">
+            <div class="pulso" [ngClass]="!erro ? estiloPulsoDireito : ''"></div>
+        </div>
+    </div>
+
+    <div class="pernas">
+        <div class="perna esquerda"></div>
+        <div class="perna direita"></div>
+    </div>
+</div>

@@ -1,0 +1,160 @@
+.robot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 400px;
+    background-color: #e0e0e0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cabeca {
+    width: 60px;
+    height: 60px;
+    background-color: #555;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.olhos {
+    position: relative;
+}
+
+.olho {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.olho.esquerdo {
+    left: 10px;
+}
+
+.olho.direito {
+    right: 10px;
+}
+
+.olho.piscar {
+    height: 2px; /* Altura reduzida para simular o piscar */
+}
+
+.boca {
+    width: 20px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.corpo {
+    width: 80px;
+    height: 120px;
+    background-color: #888;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.braco {
+    width: 20px;
+    height: 100px;
+    background-color: #888;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pulso {
+    width: 20px;
+    height: 60px; /* Altura ajustável conforme necessário */
+    background-color: #555;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 100px; /* Ajuste conforme necessário para o pulso ficar abaixo do cotovelo */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.esquerdo {
+    left: -30px;
+    transform-origin: top right;
+}
+
+.direito {
+    right: -30px;
+    transform-origin: top right; /* Ajustado para mover na direção correta */
+}
+
+.pernas {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.perna {
+    width: 20px;
+    height: 100px;
+    background-color: #888;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para animação de rotação da cabeça */
+.rotacao-menor-90 { transform: rotate(-90deg); }
+.rotacao-menor-45 { transform: rotate(-45deg); }
+.rotacao-45 { transform: rotate(45deg); }
+.rotacao-90 { transform: rotate(90deg); }
+.inclinacao-cima { transform: rotateX(-30deg); }
+.inclinacao-baixo { transform: rotateX(30deg); }
+
+/* Estilos para animação dos braços direito*/
+.cotovelo-direito-levemente-contraido { transform: rotate(-15deg); }
+.cotovelo-direito-contraido { transform: rotate(-30deg); }
+.cotovelo-direito-fortemente-contraido { transform: rotate(-45deg); }
+.pulso-rotacao-menor-90 { transform: rotate(-90deg); }
+.pulso-rotacao-menor-45 { transform: rotate(-45deg); }
+.pulso-rotacao-45 { transform: rotate(45deg); }
+.pulso-rotacao-90 { transform: rotate(90deg); }
+.pulso-rotacao-135 { transform: rotate(135deg); }
+.pulso-rotacao-180 { transform: rotate(180deg); }
+
+/* Estilos para animação dos braço esquerdo */
+.cotovelo-esquerdo-levemente-contraido { transform: rotate(15deg); }
+.cotovelo-esquerdo-contraido { transform: rotate(30deg); }
+.cotovelo-esquerdo-fortemente-contraido { transform: rotate(45deg); }
+.pulso-rotacao-menor-90 { transform: rotate(-90deg); }
+.pulso-rotacao-menor-45 { transform: rotate(-45deg); }
+.pulso-rotacao-45 { transform: rotate(45deg); }
+.pulso-rotacao-90 { transform: rotate(90deg); }
+.pulso-rotacao-135 { transform: rotate(135deg); }
+.pulso-rotacao-180 { transform: rotate(180deg); }
+
+/* Adicionando transições */
+.cabeca, .corpo, .braco, .pulso, .perna {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cabeca:hover, .corpo:hover, .braco:hover, .pulso:hover, .perna:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
